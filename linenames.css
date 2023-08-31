@@ -1,0 +1,103 @@
+/* Importing the Oswald font from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,600');
+
+/* Styling for the entire body of the webpage */
+body {
+  /* Setting the font family to Oswald with fallback to sans-serif */
+  font-family: 'Oswald', sans-serif;
+  /* Setting the font weight to 300 (light) */
+  font-weight: 300;
+  
+  /* Creating a grid layout for the body */
+  display: grid;
+  /* Defining grid columns using named grid lines */
+  grid-template-columns: [page-start] 1fr [content-start] 80vw [content-end] 1fr [page-end];
+  /* Defining grid rows using named grid lines */
+  grid-template-rows: [hero-start] 60vh [info-start] 5em [hero-end] 5em [info-end] auto [bottom];
+}
+
+/* Styling for elements with the class "title" */
+.title {
+  /* Setting text color to white */
+  color: white;
+  /* Setting font size to 3.5rem */
+  font-size: 3.5rem;
+}
+
+/* Styling for spans within elements with the class "title" */
+.title span {
+  /* Setting font weight to 300 (light) */
+  font-weight: 300;
+  /* Changing the display to block, causing spans to stack vertically */
+  display: block;
+}
+
+/* Styling for elements with the class "small-title" */
+.small-title {
+  /* Setting font size to 1rem */
+  font-size: 1rem;
+  /* Transforming text to uppercase */
+  text-transform: uppercase;
+}
+
+/* Styling for elements with the class "section-one" */
+.section-one {
+  /* Setting a background image and color, blending mode, and background size */
+  background: url(//unsplash.it/1000/800);
+  background-color: #777;
+  background-blend-mode: multiply;
+  background-size: cover;
+  /* Aligning text within the section to the center */
+  text-align: center;
+  
+  /* Grid placement for this section */
+  grid-column: page-start / page-end;
+  grid-row: hero-start / hero-end;
+  
+  /* Centering content horizontally and vertically within the section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for elements with the class "section-two" */
+.section-two {
+  /* Setting a background color */
+  background: #DDD;
+  /* Aligning text within the section to the center */
+  text-align: center;
+  
+  /* Centering content horizontally and providing space around */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+  /* Grid placement for this section */
+  grid-column: content-start / content-end;
+  grid-row: info-start / info-end;
+  /* Raising the z-index to ensure this section appears above others */
+  z-index: 10;
+}
+
+/* Styling for elements with the class "section-three" */
+.section-three {
+  /* Setting a background color */
+  background: lightblue;
+  /* Grid placement for this section */
+  grid-column: page-start / page-end;
+  grid-row: hero-end / bottom;
+  /* Adding padding to the section */
+  padding: 150px 0;
+  
+  /* Creating a sub-grid layout within this section */
+  display: grid;
+  grid-template-columns: inherit;
+}
+
+/* Styling for elements with the class "container" */
+.container {
+  /* Setting a background color */
+  background: pink;
+  /* Grid placement for this container */
+  grid-column: content-start / content-end;
+}
