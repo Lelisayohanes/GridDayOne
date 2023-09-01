@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Open sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background: #f5f5f5;
+
+}
+
+.container{
+    max-width: 960px;
+    margin: 100px auto;
+    padding: 10px;
+    display: grid;
+    /* grid-auto-flow: row; */
+    /* grid-template-columns: 1fr;   */
+    /* grid-template-rows: 1fr 2fr 1fr 2fr;  */
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 10px;
+    
+    /* grid-template-columns: repeat(4, 1fr);  this one is to repeat the same many times*/
+}
+.item{
+    background: steelblue;
+    color: #fff;
+    font-size: 20px;
+    padding: 20px;
+    border: skyblue 1px solid;
+    
+}
+
+/* @media (min-width: 600px){
+    .container{
+        grid-template-columns: 1fr 1fr 1fr;  
+    }
+
+} */
